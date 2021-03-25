@@ -1,0 +1,66 @@
+<!-- Esta além dos elementos básicos da primeira página
+vamos ver algumas tags básicas e alguns atributos -->
+<!DOCTYPE html>
+<html lang="pt-br"><!-- o atributo lang define o idioma em que a página é exibido o que pode ser muito útil para ferramentas de buscas e navegadores -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tags Básicas </title>
+</head>
+<body>
+    <!-- Tags h1, h2, h3, h4, h5 e h6 são tags ultilizadas para títulos no corpo do documento
+    recomenda-se usar somente um título principal na página este em h1,
+    estas tags obedecem hierarquia -->
+    <h1> Exemplo de Título com a tag h1 </h1>
+    <h2> Exemplo de Título com a tag h2 </h2>
+    <h3> Exemplo de Título com a tag h3 </h3>
+    <h4> Exemplo de Título com a tag h4 </h4>
+    <h5> Exemplo de Título com a tag h5 </h5>
+    <h6> Exemplo de Título com a tag h6 </h6>
+
+    <!-- A tag p significa parágrafo, assim como nos livros, são usados para separar blocos 
+    de textos, esta tag permite o uso de outras tags dentor dela. -->
+    <p> Este é um exemplo de parágrafo.</p>
+
+    <!-- Tag a cria uma ligação entre duas páginas, para isso usamos o atributo href="" 
+    também temos o atributo target que possui dois valores "_self" e "_blank"
+    o valor target="_self" abre o link na aba atual sobrepondo-a 
+    o valor target="_blank" abre o link em uma outra aba nova mantendo sua aba atual intacta
+    também podemos usar o a para direcionar um conteúdo interno da página através do ID -->
+    <a href="#" target="_blank"> Exemplo de link para a mesma página com target blank</a><br>
+    <a href="https://github.com" target="_self"> Exemplo de link para página externa GITHUB sobrepondo a aba</a><br>
+    <a href="tel:+5511983334829"> Exemplo para iniciar uma ligação quando no celular </a><br>
+    <a href="mailto:fakedenis25@gmail.com"> Exemplo de link para enviar e-mail </a><br>
+
+    <!-- Tag img, é uma tag que não tem fechamento. serve para exibir uma imagem na tela 
+    pode ser uma imagem local ou uma imagem remota 
+    o atributo src="" busca a imagem de acordo com o endereço que apontamos
+    o atributo alt="" adiciona uma mensagem que será exibido para o usuário caso o carregamento da imagem falhe
+    os atributos height="" e width="" servem para dimensionarmos altura e largura em pixel respectivamente 
+    o atributo title="" exibe um tooltip ao passar o mouse sobre a imagem-->
+    <img src="imagens/SegundaPagina/imagem.jpg" alt="figura github" height="100" width="100" title="figura github">
+
+    <!-- As tags Div são invisíveis aos usuários e tem a função de agrupar elementos HTML
+    para juntar as informações relacionadas e ajudar a organizar o nosso código
+    Abaixo dois divs um agrupando links e outro agrupando paragrafos -->
+    <div>
+        <a href="#"> Link 1 dentro da div 1 </a><br>
+        <a href="#"> Link 2 dentro da div 1 </a><br>
+        <a href="#"> Link 3 dentro da div 1 </a><br>
+    </div>
+    <div>
+        <p> Parágrafo 1 dentro da div 2 </p>
+        <p> Parágrafo 2 dentro da div 2 </p>
+        <p> Parágrafo 3 dentro da div 2 </p>
+    </div>
+
+    <!-- A tag span também não possui aparência visual, através dela conseguimos marcar textos 
+    isso nos ajuda a organizar melho o código destacando palavras importantes de uma frase -->
+    <p>Este é um <span> parágrafo </span> com span com a palavra <span> parágrafo </span> marcada. </p>
+
+    <!-- Usamos iframe para incorporar no nosso site o conteúdo de uma página externa 
+    na tag iframe temos duas propriedades assim como na tag img heigth="" e width=""
+    para dimensionarmos o tamanho que a janela "frame" irá ocupar dentro de nossa página -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14618.86053134449!2d-46.64405237782174!3d-23.650370765547926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b65829c8671%3A0x1ffe11a00c3e1916!2sMETRO%20JABAQUARA!5e0!3m2!1spt-BR!2sbr!4v1616698450785!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</body>
+</html>
