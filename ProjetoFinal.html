@@ -1,0 +1,114 @@
+<!--Este é uma pequena página para demontrar alguns conceitos aprendidos
+durante o Curso de HTML5 da DEVMEDIA-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hello Pizza </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo
+    |Reenie+Beanie|Roboto:400,500,500i">
+</head>
+<body>
+    <header>
+        <h1> Hello Pizza </h1>
+        <nav>
+            <ul>
+                <li><a href="#"> Home </a></li>
+                <li><a href="#sabores"> Sabores </a></li>
+                <li><a href="#contato"> Contato </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <ul id="vantagens">
+                <li> Qualidade </li>
+                <li> Sabor </li>
+                <li> Praticidade </li>
+                <li> Agilidade </li>
+            </ul>
+        </section>
+        <section id="sabores">
+            <h2> Sabores </h2>
+            <figure>
+                <img src="imagens/ProjetoFinal/sabores-pizzas.png" id="pizza-sabores" alt="Sabores das Pizzas">
+            </figure>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Pizzas </th>
+                        <th> Queijo e Molho </th>
+                        <th> Salada </th>
+                        <th> Carne </th>
+                        <th> Azeitonas/Champignon </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Mozzarella </td>
+                        <td rowspan="6" class="texto-negativo"> Sim </td>
+                        <td class="texto-negativo"> Não </td>
+                        <td class="texto-negativo"> Não </td>
+                        <td class="texto-negativo"> Não </td>
+                    </tr>
+                    <tr>
+                        <td> Calabresa </td>
+                        <td class="texto-negativo"> Não </td>
+                        <td class="texto-negativo"> Sim </td>
+                        <td class="texto-negativo"> Não </td>
+                    </tr>
+                    <tr>
+                        <td> Pepperoni </td>
+                        <td class="texto-negativo"> Não </td>
+                        <td class="texto-negativo"> Sim </td>
+                        <td class="texto-negativo"> Sim </td>
+                    </tr>
+                    <tr>
+                        <td> Marguerita </td>
+                        <td class="texto-negativo"> Não </td>
+                        <td class="texto-negativo"> Não </td>
+                        <td class="texto-negativo"> Sim </td>
+                    </tr>
+                    <tr>
+                        <td> Portuguesa </td>
+                        <td class="texto-negativo"> Sim </td>
+                        <td class="texto-negativo"> Sim </td>
+                        <td class="texto-negativo"> Sim </td>
+                    </tr>
+                    <tr>
+                        <td> Alho </td>
+                        <td class="texto-negativo"> Não </td>
+                        <td class="texto-negativo"> Não </td>
+                        <td class="texto-negativo"> Não </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr> 
+                        <td colspan="6"> ***Os sabores podem ser mudados a qualquer momento sem aviso prévio<br>
+                        **Sujeito a disponibilidade </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section id="contato">
+            <h2> Contato </h2>
+            <form action="#" method="POST">
+                <label for="nome"> Nome </label>
+                <input type="text" name="nome" id="nome" placeholder="Antonio Alves" required>
+                <label for="email"> Email </label>
+                <input type="email" name="email" id="email" placeholder="pizza@hellopizza.com.br" required>
+                <label for="mensagem"> Mensagem </label>
+                <textarea name="mensagem" id="mensagem" cols="10" rows="10" placeholder="Deixe aqui sua mensagem." required></textarea>
+                <input type="submit" name="enviar" id="enviar" value="Enviar mensagem">    
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a href="#" id="logo-hellopizza"> Hello Pizza </a>
+        <p> Todos os direitos reservados &copy; 2021 </p>
+    </footer>
+</body>
+</html>
