@@ -1,0 +1,70 @@
+<!--Nesta srá mostrado as principais tags do HTML Semantico que tem como objetivo descrever o significado do conteúdo presente em documentos HTML
+Torna o cógico mais claro para programadores, navegadores e outrs engines que processam a informação-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML Semântico </title>
+</head>
+<body>
+    <header><!--Ultilizado para representar o cabeçalho do documento-->
+        <h1> Título da Página </h1>
+        <fieldset>
+            <div>
+                <nav><!--A tag nav é usado para representar um agrupamento de links de navegação-->
+                    <ul type="none">
+                        <li><a href="#"> link1 </a></li>
+                        <li><a href="#"> link2 </a></li>
+                        <li> Sublinks
+                            <ul type="none">
+                                <li><a href="#"> sublink1 </a> </li>
+                                <li><a href="#"> sublink2 </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"> link4 </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </fieldset>
+    </header>
+    <main><!--Especifica o conteúdo principal da página-->
+        <section><!--Representa uma seção dentro de um documento e geralmente contém um título-->
+            <h2> Título da section1 </h2>
+            <p> Teste de <em> parágrafo </em> na section 1 </p><!--o elemento em é utilizado para enfatizarmos um trecho ou palavra no texto-->
+        </section>
+        <article><!--É usado para declarar um conteúdo que não depende de outro para fazer sentido-->
+            <h2> Título do article 1 </h2>
+            <p> Teste de <strong> parágrafo </strong> no article 1 </p><!--Strong é ultilizado para destacar uma palavra ou parte de um texto-->
+            <p>
+                <q> Declaração de citação no texto </q> - <cite> http://br.lipsum.com </cite>
+                <!--A tag q junto a tag cite serve para declarar que neste trecho de texto ha uma citação
+                sendo a tag q responsável pelo conteúdo e a tag cite para direcionar à refência bibliográfica do texto-->
+            </p>
+            <time datetime="2021-30-03">30/03</time><!--A tag time serve para informar a data em que foi escrito o conteúdo da página, muito útil para notícias-->
+        </article>
+        <section>
+            <h2> Título da section 2 </h2>
+            <p> Teste parágrafo na section 2 </p>
+            <figure><!--é uma marcação de uso específico para a inserção de figuras-->
+                <img src="imagens/SegundaPagina/imagem.jpg" alt="Imagem da Segunda Página HTML">
+                <figcaption> Figura 1 - Descrição de figura </figcaption> <!--Tag ultilizada para inserir uma descrição da figura-->
+            </figure>
+            <aside><!--Esta serve para criar um conteúdo de apoio ao conteúdo principal-->
+                <nav>
+                    <ul>
+                        <li><a href="#">Link1</a></li>
+                        <li><a href="#">Link2</a></li>
+                        <li><a href="#">Link2</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </section>
+    </main>
+    <footer><!--Esta serve para representar o rodapé de um documento HTML-->
+        <p> Teste parágrafo rodapé </p>
+    </footer>
+
+</body>
+</html>
