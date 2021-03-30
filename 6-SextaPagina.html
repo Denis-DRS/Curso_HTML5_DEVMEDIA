@@ -1,0 +1,144 @@
+<!-- Nesta será exibido um exemplo de formulário para mostrar os conhecimentos adquiridos-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulários </title>
+</head>
+<body>
+    <form action="#" method="GET"><!--Cria um formulário apontando seu início
+    o atributo action="" informa para onde o formulário será enviado ao apertar o botão Enviar
+    o atributo method="" informa o método por qual será enviado esses dados esse possui 2 valores:
+    GET que envia o formulário via URL deixando-os expostos 
+    POST envia os dados em um bloco separado da URL-->
+        <fieldset><!--Organiza e agrupa o formulário em blocos-->
+            <legend> Conta: </legend><!--Define um titulo para o bloco do formulário-->
+            <div><!--a DIV ajuda na semântica do código possibilitando uma melho visualização e organização-->
+                <label for="email"> E-mail </label><!--Exibe uma legenda para o usuário normalmente associado a um input-->
+                <input type="email" id="email" name="email" placeholder="login@login.com" minlength="10" maxlength="30" required><!--Input é um elemento que permite ao usuário colocar alguma informação
+                este pode ser de vários tipos e é complementado por vários atributos como:
+                pleaceholder="" que da uma prévia para o usuário do tipo de dado esperado naquele campo
+                type="" define o tipo de dado que será colocado
+                name="" define o nome do input, id="" define o id do elemento input
+                minlenght="" define o minimo de caracteres que podem ser inseridos naquele campo
+                maxlenght="" define o máximo de caracteres que podem ser inseridos naquele campo
+                required é um atributo que informa ao navegador que aquele dado é obrigatório para o formulário -->
+            </div>
+            <div>    
+                <label for="senha"> Senha </label>
+                <input type="password" id="senha" name="senha" required><!--O type password serve como proteção ao usuário uma vez que a senha que será digitada não ficará exposta-->
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="nome"> Nome Completo </label>
+                <input type="text" name="nome" id="nome" maxlength="50" placeholder="João Alberto" required>
+            </div>
+            <div>
+                <label for="dataNascimento"> Data de Nascimento </label>
+                <input type="date" name="dataNascimento" id="dataNNascimento" required><!--O type="date" abre um campo especial especifico para datas-->
+            </div>
+            <div>
+                <label for="cpf"> CPF </label>
+                <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" required>
+            </div>
+            <div>
+                <label for="sexo"> Sexo </label>
+                <!--Type radio define um elemento circulo para seleção de opção-->
+                <input type="radio" name="sexo" id="sexo" value="M" checked><label>Masculino</label>
+                <input type="radio" name="sexo" id="sexo" value="F"><label>Feminino</label>
+            </div>
+            <div>
+                <label for="telefone"> Telefone </label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(00)00000-0000" pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}" maxlength="14" required>
+                <!--Type="tel" é um tipo específico para telefones junto a este input foi usado um pattern design para validação deste campo-->
+            </div>
+            <div>
+                <label for="foto"> Foto Perfil </label>
+                <input type="file" name="foto" id="foto" accept="imagem/*">
+                <!--Type="file" é específico para carregar algum tipo de arquivo que pode ser definido pelo atributo accept=""-->
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> Endereço </legend>
+            <div>
+                <label for="tipoLogradouro"> Logradouro </label>
+                <select name="tipoLogradouro" id="tipoLogradouro" required>
+                    <!--a Tag select nos possibilita criar uma caixa de seleção onde teremos várias opções-->
+                    <option value="Alameda"> Alameda </option><!--A tag option define uma opção para o elemento para a tag select-->
+                    <option value="Avenida"> Avenida </option>
+                    <option value="Rodovia"> Rodovia </option>
+                    <option value="Rua"> Rua </option>
+                    <option value="Travessa"> Travessa </option>
+                    <option value="Viela"> Viela </option>
+                </select>
+                <input type="text" name="logradouro" id="logradouro" maxlength="250" required>
+                <label for="numero"> nº </label>
+                <input type="number" name="numero" id="numero" minlength="1" maxlength="99999" required>
+                <!--Type number define o input como número de modo a não aceitar nenhum outro tipo de caracter-->
+            </div>
+            <div>
+                <label for="complemanto"> Complemento </label>
+                <input type="text" name="complemento" id="complemento" maxlength="20">
+            </div>
+            <div>
+                <label for="bairro"> Bairro </label>
+                <input type="text" name="bairro" id="bairro" maxlength="30" required>
+            </div>
+            <div>
+                <label for="cidade"> Cidade </label>
+                <input type="text" name="cidade" id="cidade" required>
+            </div>
+            <div>
+                <label for="uf"> Estado </label>
+                <select name="uf" id="uf" required>
+                    <option value="AC"> Acre </option>
+                    <option value="AL"> Alagoas </option>
+                    <option value="AP"> Amapá </option>
+                    <option value="AM"> Amazonas </option>
+                    <option value="BA"> Bahia </option>
+                    <option value="CE"> Ceará </option>
+                    <option value="DF"> Distrito Federal </option>
+                    <option value="ES"> Espírito Santo </option>
+                    <option value="GO"> Goiás </option>
+                    <option value="MA"> Maranhão </option>
+                    <option value="MT"> Mato Grosso </option>
+                    <option value="MS"> Mato Grosso do Sul </option>
+                    <option value="MG"> Minas Gerais </option>
+                    <option value="PA"> Pará </option>
+                    <option value="PB"> Paraíba </option>
+                    <option value="PR"> Paraná </option>
+                    <option value="PE"> Pernambuco </option>
+                    <option value="PI"> Piauí </option>
+                    <option value="RJ"> Rio de Janeiro </option>
+                    <option value="RN"> Rio Grande do Norte </option>
+                    <option value="RS"> Rio Grande do Sul </option>
+                    <option value="RO"> Rondônia </option>
+                    <option value="RR"> Roraima </option>
+                    <option value="SC"> Santa Catarina </option>
+                    <option value="SP"> São Paulo </option>
+                    <option value="SE"> Sergipe </option>
+                    <option value="TO"> Tocantins </option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> Comentários </legend>
+            <div>
+                <textarea name="comentarios" id="comentarios" cols="30" rows="10" maxlength="200"></textarea>
+                <!--A tag textarea define um campo de texto para o usuário digitar qualquer informação que queira
+                o tamanho visual desta é definido pelos atributos cols que significa colunas e rows que significa linhas
+                o número máximo de caracteres que um usuário pode digitar é definido pelo atributo maxlenght -->
+            </div>
+            <div>
+                <input type="checkbox" name="utilizou" value="sim" checked>
+                <label for="utilizou"> Desejo receber ofertas e promoções </label>
+            </div>
+        </fieldset>
+        <input type="submit" value="Cadastrar">
+    </form><!--Aponta onde acaba o formulário-->
+</body>
+</html>
